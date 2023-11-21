@@ -3,14 +3,14 @@ title: Wyatt Hansen
 layout: "layouts/base.njk"
 ---
 
-<section class="bg-neutral-400 w-full text-white text-center px-4 py-4 md:px-8 flex flex-col items-center">
-    <div>
-        <h1 class="text-6xl py-4 md:px-4">Wyatt Hansen</h1>
-    </div>
-    <hr class="w-1/4 flex-grow border-2 border-[#FAB406]"/>
-    <img src="./assets/Head-BW.jpeg" class="px-4 py-4 md:px-8 w-1/2 flex-grow"/>
+{% include "sections/landing.html" %}
 
+{% include "sections/portfolio-engineering-proj.njk" %}
 
-</section>
+{% include "sections/portfolio-personal-proj.njk" %}
 
+{% include "sections/experiences.njk" %}
 
+{% include "sections/diplomas&certifications.njk" %}
+
+{% include "sections/contact&resume.njk" %}
