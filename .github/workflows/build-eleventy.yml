@@ -1,31 +1,19 @@
-name: Build Eleventy
-on:
-  push:
-    branches:
-      - main
+name: Eleventy Build
+on: [push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  build_deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js current
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@main
+      - name: Build
+        uses: WyattH99/WyattH99.github.io@main
         with:
-          node-version: current
-
-      - name: Install dependencies & build
-        run: |
-          npx tailwindcss -i ./src/styles/tailwindstyles.css -o ./_site/styles/tailwindstyles.css --watch
-          npx @11ty/eleventy --serve
-
+          args: --output _site
+          install_dependencies: true
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.8.0
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _site
-          #publish_branch is the branch in the repository.
-          #this is where you need to point GitHub pages
+          publish_dir: _site 
           publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
