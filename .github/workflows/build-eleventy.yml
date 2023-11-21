@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: Build
-        uses: WyattH99/WyattH99.github.io@main
+        uses: TartanLlama/actions-eleventy@v1.3
         with:
           args: --output _site
           install_dependencies: true
