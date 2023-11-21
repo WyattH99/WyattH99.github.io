@@ -27,8 +27,8 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: _site
           #publish_branch is the branch in the repository.
           #this is where you need to point GitHub pages
           publish_branch: gh-pages
