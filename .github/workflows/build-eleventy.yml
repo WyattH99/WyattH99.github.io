@@ -2,7 +2,7 @@ name: Eleventy Build
 on: [push]
 
 jobs:
-  # Build job
+  # Builds and Deploys
   build_deploy:
     runs-on: ubuntu-22.04
     steps:
