@@ -16,18 +16,15 @@ jobs:
         with:
           node-version: current
 
-      - run: yarn install
       - name: Install dependencies & build
-        run: yarn build
-        env: 
-          REPO_URL: https://github.com/WyattH99/WyattH99.github.io
-          WEB_PATH_PREFIX: /WyattH99.github.io/
-          WEB_ROOT_URL: https://WyattH99.github.io/
+        run: |
+          npx tailwindcss -i ./src/styles/tailwindstyles.css -o ./_site/styles/tailwindstyles.css --watch
+          npx @11ty/eleventy --serve
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site
           #publish_branch is the branch in the repository.
           #this is where you need to point GitHub pages
