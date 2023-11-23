@@ -4,5 +4,10 @@
     {% import "sections/sectiontitle-macro.njk" as macro %}
     {{ macro.sectiontitle("Experiences") }}
 
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
+        {% import "sections/sectioncards-macro.njk" as macro %}
+        {{ macro.sectioncards("./assets/Head-BW.jpeg", "Genesis Dimensions", "Successfully did stuff that sounds impressive with quantified results.") }}
+        {{ macro.sectioncards("./assets/Head-BW.jpeg", "Arrington Automation", "Successfully did stuff that sounds impressive with quantified results.") }}
+    </div>
     
 </section>
