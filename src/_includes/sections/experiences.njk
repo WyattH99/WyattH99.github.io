@@ -7,8 +7,12 @@
     <div class="grid grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
         {% import "sections/sectioncards-macro.njk" as macro %}
         {{ macro.sectioncards("./assets/Experiences/GenesisDimensions.png", "Genesis Dimensions", "Successfully did stuff that sounds impressive with quantified results.") }}
-        {{ macro.sectioncards("./assets/Experiences/ArringtonAutomation.png", "Arrington Automation", "Successfully did stuff that sounds impressive with quantified results.") }}
-        {{ macro.sectioncards("./assets/Experiences/BUILD.png", "BUILD", "Successfully did stuff that sounds impressive with quantified results.") }}
+        <a href="https://www.arringtonautomation.com/" class="" target="_blank">
+            {{ macro.sectioncards("./assets/Experiences/ArringtonAutomation.png", "Arrington Automation", "Successfully did stuff that sounds impressive with quantified results.") }}
+        </a>
+        <a href="https://www.buildtamu.com/" class="" target="_blank">
+            {{ macro.sectioncards("./assets/Experiences/BUILD.png", "BUILD", "Successfully did stuff that sounds impressive with quantified results.") }}
+        </a>
     </div>
     
 </section>
