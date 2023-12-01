@@ -6,11 +6,34 @@
 
 <div class="grid grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
     {% import "sections/sectioncards-macro.njk" as macro %}
-    {{ macro.sectioncards("./assets/EngineeringProjects/CameraAndLidarDataSynchronization.jpg", "Camera and Lidar Data Synchronization", "Successfully did stuff that sounds impressive with quantified results.") }}
-    {{ macro.sectioncards("./assets/WebsiteUnderConstruction.png", "HC-12 Gate Opener and Alarm System", "Successfully did stuff that sounds impressive with quantified results.") }}
-    {{ macro.sectioncards("./assets/EngineeringProjects/WiFiControlledCar.jpg", "WiFi Controlled Car", "Successfully did stuff that sounds impressive with quantified results.") }}
-    {{ macro.sectioncards("./assets/EngineeringProjects/LineFollowingRobot2.jpg", "Line Following Robot", "Successfully did stuff that sounds impressive with quantified results.") }}
-    {{ macro.sectioncards("./assets/EngineeringProjects/TableRover.jpg", "Table Rover", "Successfully did stuff that sounds impressive with quantified results.") }}
+
+    {{ macro.sectioncards("./assets/EngineeringProjects/CameraAndLidarDataSynchronization.jpg", 
+        "Camera and Lidar Data Synchronization", 
+        "As the Project Lead for my Senior Design endeavor, 
+        I successfully demonstrated the synchronization of Data from GPS, Lidar, and Camera sensors by utilizing the PPS signal from the GPS.
+        I employed ROSpy and RViz for data visualization.
+        I led a team of five accomplished engineering students, underscoring my adept teamwork and project coordination skills.") }}
+    
+    {{ macro.sectioncards("./assets/WebsiteUnderConstruction.png", 
+        "HC-12 Gate Opener and Alarm System", 
+        "Utilizing multiple STM32 MCU with an HC-12 module I will implement a wireless connection with the intention of actuating a gate.
+        The projects goals is to have a gate-opener with much further range, and enable another MCU placed inside the house to alert us when the gate is opened. 
+        This project is currently on-going.") }}
+    
+    
+    {{ macro.sectioncards("./assets/EngineeringProjects/LineFollowingRobot2.jpg", 
+        "Line Following Robot", 
+        "Utilizing a Basys 3 board, Vivado, VHDL, and an array of Capcitance sensors I implemented a robot that can follow a 5V wire taped to the ground.") }}
+
+    {{ macro.sectioncards("./assets/EngineeringProjects/WiFiControlledCar.jpg", 
+        "WiFi Controlled Car", 
+        "Completed for my Engineering 112 course with a group of 4 other Engineering Students,
+        the goal of this project was to demonstrate our ability to problem solve and be effective in a team environment.") }}
+    
+    {{ macro.sectioncards("./assets/EngineeringProjects/TableRover.jpg", 
+        "Table Rover", 
+        "Completed for my Engineering 111 course with a group of 3 other Engineering Students. 
+        This was a simple robot constructed of the Lego Mindstorm Modules but allowed me to demonstate my Teamwork skills and simple engineering concepts.") }}
 
 </div>
     
