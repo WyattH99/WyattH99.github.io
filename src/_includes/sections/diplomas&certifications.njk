@@ -4,7 +4,7 @@
     {% import "sections/sectiontitle-macro.njk" as macro %}
     {{ macro.sectiontitle("Diplomas & Certifications") }}
 
-    <div class="grid grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
         {% import "sections/sectioncards-macro.njk" as macro %}
         <a href="https://catalog.tamu.edu/undergraduate/engineering/electrical-computer/computer-engineering-bs/" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500" target="_blank">
             {{ macro.sectioncards("./assets/Diplomas/TamuComputerEngineering.svg", "Computer Engineering - BS", "Minor in Cyber Security - From Texas A&M University") }}
