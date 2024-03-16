@@ -1,3 +1,3 @@
 # WyattH99.github.io
 
-This is the main repository for my personal website.
+I built this website to showcase my Projects, Experiences, and Diplomas & Certifications.
