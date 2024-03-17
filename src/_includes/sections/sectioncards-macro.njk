@@ -1,18 +1,9 @@
 
 {% macro sectioncards(picture, heading, paragraph) %}
 
-{# <div class="flex flex-col items-center rounded-lg shadow bg-[#676C68]">
-    <img class="object-cover w-auto h-auto rounded-lg" 
-            src={{ picture }} alt=""/>
-    <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-black">{{ heading }}</h5>
-        <p class="mb-3 font-normal text-black">{{ paragraph }}</p>
-    </div>
-</div> #}
-
 <div class='flex items-center justify-center'>
   <div class="aspect-video rounded-xl relative group">
-        <div class="rounded-xl z-50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out cursor-pointer absolute bg-zinc-900 inset-x-0 -bottom-2 pt-30 text-white flex items-end">
+        <div class="rounded-xl z-50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out absolute bg-zinc-900 inset-x-0 -bottom-2 pt-30 text-white flex items-end">
             <div>
                 <div class="space-y-3 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 p-5 transform transition duration-300 ease-in-out">
                     <div class="font-bold">{{ heading }}</div>
@@ -25,6 +16,12 @@
             class="rounded-lg object-cover w-full aspect-square "
             src={{ picture }}
             />
+        <div class="sm:hidden">
+            <div class="space-y-3 text-xl ">
+                <div class="font-bold">{{ heading }}</div>
+                <div class="opacity-80 text-sm">{{ paragraph }}</div>
+            </div>
+        </div>
     </div>
  </div>
 
