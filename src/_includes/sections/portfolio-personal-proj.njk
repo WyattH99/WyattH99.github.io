@@ -7,10 +7,11 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
         {% import "sections/sectioncards-macro.njk" as macro %}
 
-        {{ macro.sectioncards("./assets/PersonalProjects/SofleKeyboard.jpg", 
+        <a href="https://github.com/WyattH99/SoflRGBv2.1" class="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
+            {{ macro.sectioncards("./assets/PersonalProjects/SofleKeyboard.jpg", 
             "Sofle Keyboard", 
             "Constructed the Sofle Keyboard as a means to further my expertise in electronics, soldering, and programming. With the keyboard completed my next goal is to develop custom firmware for the keyboard.") }}
-
+        </a>
         {{ macro.sectioncards("./assets/PersonalProjects/SterlingEngine1.jpg", 
             "Sterling Engine", 
             "In my high school education, I actively participated in Skills USA and this engine achieved qualification for the State Competition in 2017. I meticulously crafted all engine components using a combination of CNC along with manual milling and lathe techniques. Additionally, I excelled in the Manual and Automated Machinist Competition.") }}
