@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,njk}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+          'betterhover': {'raw': '(hover: hover)'},
+      }
+    },
   },
   plugins: [],
 }
