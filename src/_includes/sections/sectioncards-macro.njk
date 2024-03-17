@@ -3,27 +3,15 @@
 
 <div class='flex items-center justify-center'>
   <div class="aspect-video rounded-xl relative group">
-    <div class="hidden sm:block">
-        <div class="rounded-xl z-50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out absolute bg-zinc-900 inset-x-0 -bottom-2 pt-30 text-white flex items-end">
-            <div>
-                <div class="space-y-3 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 p-5 transform transition duration-300 ease-in-out">
-                    <div class="font-bold">{{ heading }}</div>
-                    <div class="opacity-80 text-sm">{{ paragraph }}</div>
-                </div>
-            </div>
-        </div>
-    </div>
         <img
             alt=""
             class="rounded-lg object-cover w-full aspect-square "
             src={{ picture }}
             />
-        <div class="sm:hidden ">
             <div class="space-y-3 text-xl ">
                 <div class="font-bold">{{ heading }}</div>
                 <div class="opacity-80 text-sm">{{ paragraph }}</div>
             </div>
-        </div>
     </div>
  </div>
 
