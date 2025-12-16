@@ -1,6 +1,9 @@
 {
   "name": "wyatth99.github.io",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=18 <19"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
