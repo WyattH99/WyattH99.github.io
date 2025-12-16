@@ -7,6 +7,11 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@main
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
       - name: Build
         uses: TartanLlama/actions-eleventy@v1.3
       - name: Deploy
