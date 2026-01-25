@@ -1,0 +1,30 @@
+<section id="Engineering" class="bg-rose-950 w-full text-white text-center px-4 py-8 md:px-8 flex flex-col items-center">
+    
+{% include sectiontitle.html section_title="Engineering Projects" %}
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
+    
+    <a href="https://github.com/WyattH99/RobotArm_stm32" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
+        {% include sectioncards.html picture="./assets/EngineeringProjects/RobotArm_stm32.gif" 
+        heading="STM32 Robotic Arm Project" 
+        paragraph="3D Printed Robotic Arm with a STM32 micro-controller, integrating a smaller robot as the primary controller using a Super Loop Control methodology. Using STM32 HAL, I mapped the readings of the Potentiometers using the ADC Peripheral to control the servos through a Servo Driver with I2C communication. Credits: YouTube Channel 'Build Some Stuff' - Robotic Arm Design and STL files for 3D Printing, Github User 'Lamik' - PCA9685 Servo Driver for STM32. Check out the code on my GitHub!" %}
+    </a>
+    {% include sectioncards.html picture="./assets/EngineeringProjects/CameraAndLidarDataSynchronization.jpg" 
+        heading="Camera and Lidar Data Synchronization" 
+        paragraph="As the Team Lead, I spearheaded my Senior Project, overseeing the successful synchronization and visualization of data originating from a Camera and Lidar in conjunction with the precise PPS signal from an external GPS, a sophisticated process commonly referred to as Sensor Fusion. The project leveraged ROSpy and RViz for advanced data visualization." %}
+    
+    {% include sectioncards.html picture="./assets/EngineeringProjects/LineFollowingRobot2.jpg" 
+        heading="Line Following Robot" 
+        paragraph="Designed and developed an autonomous car utilizing a Xilinx BASYS 3 FPGA, 2 DC motors, and Capacitance Sensors, enabling it to autonomously track and follow a 5V current-carrying wire on the floor. Collaborated closely with a team of two engineering students to successfully complete this project for my Digital Electronics Class." %}
+
+    {% include sectioncards.html picture="./assets/EngineeringProjects/WiFiControlledCar.jpg" 
+        heading="WiFi Controlled Car" 
+        paragraph="Successfully implementing motor control for four DC motors through the generation of PWM signals via a TI Launchpad CC3200-LAUNCHXL, enabling wireless control over WiFi. A 3D printer was also utilized to manufacture the mechanical frame. Collaborated effectively with a team of four engineering students for the completion of the project for my Foundations of Engineering 112 Class." %}
+    
+    {% include sectioncards.html picture="./assets/EngineeringProjects/TableRover.jpg" 
+        heading="Table Rover" 
+        paragraph="Lego MINDSTORMS EV3 was used to build a Table Rover with an Ultrasonic Sensor to detect the edge of the table and turn with-out falling off. This project was completed as a team of 3 engineering students, for my Foundations of Engineering 111 class." %}
+
+</div>
+    
+</section>
