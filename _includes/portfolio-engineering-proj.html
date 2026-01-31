@@ -5,9 +5,15 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
     
     <a href="https://github.com/WyattH99/RobotArm_stm32" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
-        {% include sectioncards.html picture="./assets/EngineeringProjects/RobotArm_stm32.gif" 
-        heading="STM32 Robotic Arm Project" 
+        {% include sectioncards.html picture="./assets/EngineeringProjects/RobotArm_stm32.gif"
+        heading="STM32 Robotic Arm Project"
         paragraph="3D Printed Robotic Arm with a STM32 micro-controller, integrating a smaller robot as the primary controller using a Super Loop Control methodology. Using STM32 HAL, I mapped the readings of the Potentiometers using the ADC Peripheral to control the servos through a Servo Driver with I2C communication. Credits: YouTube Channel 'Build Some Stuff' - Robotic Arm Design and STL files for 3D Printing, Github User 'Lamik' - PCA9685 Servo Driver for STM32. Check out the code on my GitHub!" %}
+    </a>
+
+    <a href="https://github.com/WyattH99/epaper" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
+        {% include sectioncards.html picture="./assets/EngineeringProjects/epaper.jpg"
+        heading="EPaper Display"
+        paragraph="Raspberry Pi e-paper display for tracking Advent of Code progress. Features auto-updating via cron, webpage-to-display conversion, and SPI/GPIO hardware integration." %}
     </a>
     {% include sectioncards.html picture="./assets/EngineeringProjects/CameraAndLidarDataSynchronization.jpg" 
         heading="Camera and Lidar Data Synchronization" 
