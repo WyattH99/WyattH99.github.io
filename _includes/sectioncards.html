@@ -1,10 +1,22 @@
 <div class='flex items-center justify-center'>
   <div class="aspect-video rounded-xl relative group">
+        {% if include.video %}
+        <video
+            class="rounded-lg object-cover w-full"
+            autoplay loop muted playsinline
+            poster="{{ include.poster }}"
+            aria-label="{{ include.heading }}">
+            <source src="{{ include.video }}" type="video/webm">
+        </video>
+        {% else %}
         <img
             alt="{{ include.heading }}"
             class="rounded-lg object-cover w-full"
+            loading="lazy"
+            decoding="async"
             src="{{ include.picture }}"
             />
+        {% endif %}
             <div class="space-y-3 text-xl ">
                 <div class="font-bold">{{ include.heading }}</div>
                 <div class="text-justify opacity-80 text-sm">{{ include.paragraph }}</div>

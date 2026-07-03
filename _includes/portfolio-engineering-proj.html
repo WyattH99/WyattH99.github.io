@@ -5,13 +5,13 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
 
     <a href="https://countriesofthe.world" class="sm:col-span-2 transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
-        {% include sectioncards.html picture="./assets/EngineeringProjects/CountriesOfTheWorld.gif"
+        {% include sectioncards.html video="./assets/EngineeringProjects/CountriesOfTheWorld.webm" poster="./assets/EngineeringProjects/CountriesOfTheWorld_poster.jpg"
         heading="Countries of the World Game"
         paragraph="Designed and developed a multiplayer geography game where players race the clock to type or find all 197 countries on an ASCII-art world map, featuring eight game modes across the modern world, five historical eras, Pangaea, and the US states. I built the map engine from scratch with React and TypeScript, utilizing d3-geo for the map geometry, a Web Worker for rasterization, and a WebGL2 shader for drawing the map. The backend was built with Hono and Node, handling real-time multiplayer over Server-Sent Events and worldwide Postgres leaderboards, using signed tokens and gameplay telemetry to prevent cheating. Tested with Vitest and Playwright in CI and deployed on DigitalOcean behind Cloudflare. Check it out and play a game at countriesofthe.world!" %}
     </a>
 
     <a href="https://github.com/WyattH99/RobotArm_stm32" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
-        {% include sectioncards.html picture="./assets/EngineeringProjects/RobotArm_stm32.gif"
+        {% include sectioncards.html video="./assets/EngineeringProjects/RobotArm_stm32.webm" poster="./assets/EngineeringProjects/RobotArm_stm32_poster.jpg"
         heading="STM32 Robotic Arm Project"
         paragraph="3D Printed Robotic Arm with a STM32 micro-controller, integrating a smaller robot as the primary controller using a Super Loop Control methodology. Using STM32 HAL, I mapped the readings of the Potentiometers using the ADC Peripheral to control the servos through a Servo Driver with I2C communication. Credits: YouTube Channel 'Build Some Stuff' - Robotic Arm Design and STL files for 3D Printing, Github User 'Lamik' - PCA9685 Servo Driver for STM32. Check out the code on my GitHub!" %}
     </a>
