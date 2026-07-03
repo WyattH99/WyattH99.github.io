@@ -1,0 +1,108 @@
+# Roadmap
+
+Parking lot from the 2026-07-03 performance/content session — items to discuss
+and prioritize later, none committed work yet. Ordered roughly by value.
+"(needs Wyatt)" = facts/decisions only Wyatt has; "(mechanical)" = can be done
+straight away once green-lit.
+
+## Content — the highest-value work left (added 2026-07-03)
+
+The site's technical foundation is in good shape (see git history for the
+perf pass); what's left that moves the needle is content.
+
+- [ ] **Rewrite the landing bio.** (needs Wyatt) It still reads as a 2021 new
+      grad ("eager to join a high-caliber engineering team") — it predates the
+      UT Austin MSE, the years of experience since, and COTW. First thing
+      anyone reads; should describe who I am now (embedded + full-stack
+      software engineer), not who I was in 2021.
+- [ ] **Bring the Experiences section past 2021.** (needs Wyatt) It currently
+      ends at internships + BUILD, implying the career paused. Add full-time
+      roles: names, dates, one-liners, a photo/logo each.
+- [ ] **Update the resume PDF** (`assets/WyattHansen_Resume.pdf`). (needs
+      Wyatt) The footer links it prominently and it predates COTW and the MSE.
+      A stale PDF undercuts the site.
+- [ ] **Add the two orphaned projects.** (needs Wyatt: 2–3 sentences each)
+      `HomeSecuritySystemAndGateOpener.jpg` and `7SegmentDisplay.jpg` sit in
+      assets with no cards.
+- [ ] **Tech-tag chips on project cards** (`STM32` `React` `FPGA` `RTOS` …).
+      (mechanical once tags are picked) Recruiters skim; dense paragraphs hide
+      the keywords. Small `sectioncards.html` extension.
+
+## Mobile experience (added 2026-07-03)
+
+The layout is responsive and was spot-checked at 390px, but it has never had
+a deliberate mobile pass. Do a real-device audit, then fix what it finds:
+
+- [ ] **Real-device pass: iOS Safari (iPhone AND iPad) + Android Chrome.**
+      Specific things to verify:
+      - The project **videos are WebM/VP8** — old iOS (< 16.4) can't play
+        WebM and will show only the poster frame. Acceptable fallback, but
+        confirm on real devices; if any that matter fail, add an MP4/H.264
+        `<source>` fallback (needs a full ffmpeg build — the Playwright one
+        used for encoding has no x264).
+      - **iOS Low Power Mode suppresses autoplay** — check the posters read
+        well as static images, since that's what those users see.
+      - Lazy-loaded images appear promptly while flick-scrolling (no blank
+        cards on fast scrolls).
+      - Sticky header/footer behavior as mobile browser chrome collapses.
+- [ ] **Touch affordances for linked cards.** Cards that link out (COTW,
+      robot arm, EPaper, Sofle, experiences, diplomas) only reveal it on
+      hover — invisible on touch. Add a visible cue (e.g., a small ↗ badge or
+      "visit" hint on the card).
+- [ ] **`text-justify` paragraphs on narrow columns** produce uneven word
+      spacing ("rivers"). Consider `text-left` below `sm:` and keep justify on
+      desktop.
+- [ ] **Tap targets in the header nav** are small and tight on phones
+      (`text-sm p-1`, four links). Lighthouse flags sub-48px targets; pad them
+      on mobile.
+- [ ] **Sticky footer costs viewport height on phones** — and it's taller on
+      mobile because the icon labels show (`md:hidden`). Consider making it
+      non-sticky below `md:`.
+- [ ] **Cellular data cost:** ~2 MB of video autoplays on load. If mobile
+      traffic ever matters (see analytics item), consider poster-until-tap on
+      small screens / respect Save-Data, via a few lines of
+      IntersectionObserver JS.
+- [ ] **Smallest widths:** check 320–375 px (iPhone SE) and ~280 px
+      (foldables) — the `text-6xl` section titles and header nav wrap.
+- [ ] **Acceptance bar:** run PageSpeed Insights (mobile, throttled) and keep
+      a green score — today's measurements were desktop-network only.
+
+## UX polish (added 2026-07-03)
+
+- [ ] **Anchor links land under the sticky header** — nav clicks scroll
+      section titles partially behind it. Add `scroll-margin-top` on sections
+      + `scroll-behavior: smooth`. (mechanical, five minutes)
+- [ ] **`prefers-reduced-motion`:** pause/avoid video autoplay for users with
+      reduced motion set. (mechanical)
+
+## SEO / discoverability (added 2026-07-03)
+
+- [ ] **Heading hierarchy:** every section title is an `<h1>`
+      (`sectiontitle.html`); should be one `h1` (landing), `h2` sections,
+      `h3` cards. (mechanical)
+- [ ] **Page title:** "Wyatt Hansen" → "Wyatt Hansen — Software & Embedded
+      Systems Engineer" (or similar). (needs Wyatt: pick the phrasing)
+- [ ] **JSON-LD `Person` structured data** linking the site, GitHub, and
+      LinkedIn. (mechanical)
+- [ ] **Custom domain** (~$10/yr, e.g. wyatthansen.dev). Looks better on a
+      resume than wyatth99.github.io, and fronting it with Cloudflare fixes
+      the one perf lever GitHub Pages won't (fixed 10-min cache headers).
+      (needs Wyatt: buy the domain)
+- [ ] **Analytics** — currently zero visibility into visits. GoatCounter or
+      Cloudflare analytics are free and cookie-banner-free (same reasoning as
+      COTW's no-banner decision). (needs Wyatt: pick provider)
+
+## Housekeeping (added 2026-07-03)
+
+- [ ] **Purge dead assets:** `WebsiteUnderConstruction.png`, unused 3.2 MB
+      `RobotArm_stm32.jpeg`, duplicate diploma images (`UdemyFreeRTOS.jpg`,
+      `UdemyEmbeddedSystemsProgramming.jpg`, `TamuComputerEngineering.svg`),
+      `ArringtonAutomation.png`, `LineFollowingRobot1.jpg`, unused icon SVGs.
+      Repo-only, no page impact. (mechanical)
+- [ ] **Real README** — currently one sentence; document the local dev loop
+      (`npm start`), the build (`npm run build`), and the deploy flow (push to
+      main → Actions). (mechanical)
+- [ ] **`404.html`** — GitHub Pages serves its generic 404 today. (mechanical)
+- [ ] **COTW code link (optional):** the card says "play it live"; if the
+      `WyattH99/cotw` repo ever goes public, add a "code on GitHub" line to
+      the card. (needs Wyatt: decision)
