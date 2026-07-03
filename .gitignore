@@ -20,3 +20,6 @@ Thumbs.db
 # Environment
 .env
 .env.local
+
+# Bundler lockfile (removed deliberately: CI bundler version mismatch, cf3a0b9)
+Gemfile.lock
