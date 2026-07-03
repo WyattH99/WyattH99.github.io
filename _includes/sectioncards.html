@@ -2,7 +2,7 @@
   <div class="aspect-video rounded-xl relative group">
         {% if include.video %}
         <video
-            class="rounded-lg object-cover w-full"
+            class="rounded-lg object-cover w-full aspect-video"
             autoplay loop muted playsinline
             poster="{{ include.poster }}"
             aria-label="{{ include.heading }}">
@@ -11,7 +11,7 @@
         {% else %}
         <img
             alt="{{ include.heading }}"
-            class="rounded-lg object-cover w-full"
+            class="rounded-lg object-cover w-full aspect-video"
             loading="lazy"
             decoding="async"
             src="{{ include.picture }}"
