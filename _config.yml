@@ -34,6 +34,19 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+# NOTE: Jekyll 3 (github-pages gem) REPLACES the default exclude list with
+# this one (Jekyll 4 merges), so the defaults must be re-listed here.
 exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
   - README.md
   - ROADMAP.md
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
