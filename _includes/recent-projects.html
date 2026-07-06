@@ -1,0 +1,15 @@
+<section id="Recent" class="scroll-mt-28 md:scroll-mt-14 bg-rose-950 w-full text-white text-center px-4 py-8 md:px-8 flex flex-col items-center">
+
+    {% include sectiontitle.html section_title="Recent Projects" %}
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
+
+        <a href="https://countriesofthe.world" class="sm:col-span-2 transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
+            {% include sectioncards.html video="./assets/EngineeringProjects/CountriesOfTheWorld.webm" poster="./assets/EngineeringProjects/CountriesOfTheWorld_poster.jpg"
+            heading="Countries of the World Game"
+            paragraph="Designed and launched a multiplayer geography game where players race the clock to type or find all 197 countries on an ASCII-art world map, featuring eight game modes across the modern world, five historical eras, Pangaea, and the US states. I developed this project entirely by directing AI coding agents (Claude Code): I owned the product direction, specified the features and gameplay rules, made the architecture decisions, reviewed the generated code, and tested every release on real desktop and mobile devices. The game runs on React and TypeScript with a WebGL2 map renderer, and a Hono and Node backend handling real-time multiplayer over Server-Sent Events, worldwide Postgres leaderboards, and anti-cheat telemetry. Deployed and operated in production on DigitalOcean behind Cloudflare. Check it out and play a game at countriesofthe.world!" %}
+        </a>
+
+    </div>
+
+</section>

@@ -10,11 +10,10 @@ straight away once green-lit.
 The site's technical foundation is in good shape (see git history for the
 perf pass); what's left that moves the needle is content.
 
-- [ ] **Rewrite the landing bio.** (needs Wyatt) It still reads as a 2021 new
-      grad ("eager to join a high-caliber engineering team") — it predates the
-      UT Austin MSE, the years of experience since, and COTW. First thing
-      anyone reads; should describe who I am now (embedded + full-stack
-      software engineer), not who I was in 2021.
+- [x] **Rewrite the landing bio.** Done 2026-07-06: now covers the TAMU BS,
+      the UT Austin MSE, the embedded foundation, and COTW (including the
+      AI-directed development framing). Grounded only in facts already on the
+      site — revise if any phrasing feels off.
 - [ ] **Bring the Experiences section past 2021.** (needs Wyatt) It currently
       ends at internships + BUILD, implying the career paused. Add full-time
       roles: names, dates, one-liners, a photo/logo each.
