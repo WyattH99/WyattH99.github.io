@@ -69,21 +69,23 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
 
 ## UX polish (added 2026-07-03)
 
-- [ ] **Anchor links land under the sticky header** — nav clicks scroll
-      section titles partially behind it. Add `scroll-margin-top` on sections
-      + `scroll-behavior: smooth`. (mechanical, five minutes)
-- [ ] **`prefers-reduced-motion`:** pause/avoid video autoplay for users with
-      reduced motion set. (mechanical)
+- [x] **Anchor links land under the sticky header** — nav clicks scroll
+      section titles partially behind it. Done 2026-07-06: `scroll-mt-14` on
+      all sections + `motion-safe:scroll-smooth` on `<html>`.
+- [x] **`prefers-reduced-motion`:** pause/avoid video autoplay for users with
+      reduced motion set. Done 2026-07-06: a small head script strips
+      autoplay, pauses the videos, and shows controls instead.
 
 ## SEO / discoverability (added 2026-07-03)
 
-- [ ] **Heading hierarchy:** every section title is an `<h1>`
-      (`sectiontitle.html`); should be one `h1` (landing), `h2` sections,
-      `h3` cards. (mechanical)
+- [x] **Heading hierarchy.** Done 2026-07-06: one `h1` (landing name), `h2`
+      section titles, `h3` card headings; the header logo text and landing
+      bio are no longer headings.
 - [ ] **Page title:** "Wyatt Hansen" → "Wyatt Hansen — Software & Embedded
       Systems Engineer" (or similar). (needs Wyatt: pick the phrasing)
-- [ ] **JSON-LD `Person` structured data** linking the site, GitHub, and
-      LinkedIn. (mechanical)
+- [x] **JSON-LD `Person` structured data** linking the site, GitHub, and
+      LinkedIn. Done 2026-07-06 in `default.html` (name, image, alumniOf,
+      sameAs).
 - [ ] **Custom domain** (~$10/yr, e.g. wyatthansen.dev). Looks better on a
       resume than wyatth99.github.io, and fronting it with Cloudflare fixes
       the one perf lever GitHub Pages won't (fixed 10-min cache headers).
@@ -94,15 +96,14 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
 
 ## Housekeeping (added 2026-07-03)
 
-- [ ] **Purge dead assets:** `WebsiteUnderConstruction.png`, unused 3.2 MB
-      `RobotArm_stm32.jpeg`, duplicate diploma images (`UdemyFreeRTOS.jpg`,
-      `UdemyEmbeddedSystemsProgramming.jpg`, `TamuComputerEngineering.svg`),
-      `ArringtonAutomation.png`, `LineFollowingRobot1.jpg`, unused icon SVGs.
-      Repo-only, no page impact. (mechanical)
-- [ ] **Real README** — currently one sentence; document the local dev loop
-      (`npm start`), the build (`npm run build`), and the deploy flow (push to
-      main → Actions). (mechanical)
-- [ ] **`404.html`** — GitHub Pages serves its generic 404 today. (mechanical)
+- [x] **Purge dead assets.** Done 2026-07-06: 13 unreferenced files removed
+      (grep-verified) — construction placeholder, duplicate diploma/robot-arm
+      images, unused icon SVGs. Kept `7SegmentDisplay.jpg` and
+      `HomeSecuritySystemAndGateOpener.jpg` for their future cards.
+- [x] **Real README** documenting the dev loop, build, and deploy flow.
+      Done 2026-07-06.
+- [x] **`404.html`** — was GitHub's generic 404. Done 2026-07-06: styled page
+      using the default layout.
 - [ ] **COTW code link (optional):** the card says "play it live"; if the
       `WyattH99/cotw` repo ever goes public, add a "code on GitHub" line to
       the card. (needs Wyatt: decision)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="motion-safe:scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,36 @@
     <meta property="og:image" content="{{ site.url }}/assets/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link href="/assets/tailwindstyles.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Wyatt Hansen",
+      "url": "{{ site.url }}/",
+      "image": "{{ site.url }}/assets/Headshot.jpeg",
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Texas A&M University" },
+        { "@type": "CollegeOrUniversity", "name": "The University of Texas at Austin" }
+      ],
+      "sameAs": [
+        "https://github.com/WyattH99",
+        "https://www.linkedin.com/in/wyatth99"
+      ]
+    }
+    </script>
+    <script>
+      // prefers-reduced-motion: stop the project videos from autoplaying and
+      // surface controls instead, so they stay watchable on demand.
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('video[autoplay]').forEach(function (v) {
+            v.removeAttribute('autoplay');
+            v.pause();
+            v.controls = true;
+          });
+        });
+      }
+    </script>
 </head>
 <body>
     <div class="min-h-screen flex flex-col justify-between">
