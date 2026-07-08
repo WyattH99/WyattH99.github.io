@@ -66,9 +66,11 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       (foldables) — the `text-6xl` section titles and header nav wrap.
 - [x] **Acceptance bar:** run PageSpeed Insights (mobile, throttled) and keep
       a green score. Baseline 2026-07-08 (local Lighthouse at PSI defaults;
-      anonymous PSI API was over quota): **Performance 93 · Accessibility 95 ·
-      Best Practices 100 · SEO 100**; FCP 0.9s, LCP 2.5s, TBT 220ms, CLS 0,
+      anonymous PSI API was over quota): Performance 93 · Accessibility 95 ·
+      Best Practices 100 · SEO 100; FCP 0.9s, LCP 2.5s, TBT 220ms, CLS 0,
       payload 2.9MB. Re-run after big changes and keep ≥90.
+      **2026-07-08 after a11y + WebP work: 95 · 100 · 100 · 100; LCP 1.6s,
+      CLS 0, payload 2.4MB (of which ~2MB is the two project videos).**
 
 Follow-ups the Lighthouse run surfaced (added 2026-07-08):
 
@@ -76,10 +78,10 @@ Follow-ups the Lighthouse run surfaced (added 2026-07-08):
       aria-labels on the four footer links AND the header logo link (whose
       text is hidden on mobile — it was the last failing node). Local
       Lighthouse accessibility now **100**.
-- [ ] **Image format/sizing headroom (~0.8MB est):** serve the card JPEGs as
-      WebP and/or add responsive `srcset` so phones don't download 1200px
-      images for ~350px slots. Diminishing returns; do during some future
-      image touch-up. (mechanical)
+- [x] **Image format/sizing headroom.** Done 2026-07-08: every card image,
+      poster, and the headshot is WebP with a 600px variant; sectioncards
+      derives `srcset`/`sizes` from the picture path. Desktop 1x pulls the
+      600px files, 3x phones the full size. LCP 2.5s → 1.6s.
 - [ ] **"Efficient cache lifetimes" finding (~2.6MB)** is the known GitHub
       Pages 10-minute max-age — unfixable without the custom domain + CDN
       item above; listed here so future runs aren't re-investigated.
