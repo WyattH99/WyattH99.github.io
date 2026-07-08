@@ -12,12 +12,15 @@
             <source src="{{ include.video }}" type="video/webm">
         </video>
         {% else %}
+        {% assign picture_small = include.picture | replace: '.webp', '-600.webp' %}
         <img
             alt="{{ include.heading }}"
             class="rounded-lg object-cover w-full aspect-video"
             loading="lazy"
             decoding="async"
             src="{{ include.picture }}"
+            srcset="{{ picture_small }} 600w, {{ include.picture }} 1200w"
+            sizes="(min-width: 640px) 480px, 100vw"
             />
         {% endif %}
             <div class="space-y-3 text-xl ">
