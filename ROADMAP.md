@@ -76,8 +76,10 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       anonymous PSI API was over quota): Performance 93 · Accessibility 95 ·
       Best Practices 100 · SEO 100; FCP 0.9s, LCP 2.5s, TBT 220ms, CLS 0,
       payload 2.9MB. Re-run after big changes and keep ≥90.
-      **2026-07-08 after a11y + WebP work: 95 · 100 · 100 · 100; LCP 1.6s,
-      CLS 0, payload 2.4MB (of which ~2MB is the two project videos).**
+      2026-07-08 after a11y + WebP work: 95 · 100 · 100 · 100; LCP 1.6s,
+      CLS 0, payload 2.4MB (of which ~2MB is the two project videos).
+      **2026-07-08 after lazy videos: 100 · 100 · 100 · 100; LCP 1.6s,
+      TBT 20ms, Speed Index 0.9s, CLS 0, load-time payload 679 KiB.**
 
 Follow-ups the Lighthouse run surfaced (added 2026-07-08):
 
