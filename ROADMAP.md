@@ -44,10 +44,10 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       - Lazy-loaded images appear promptly while flick-scrolling (no blank
         cards on fast scrolls).
       - Sticky header/footer behavior as mobile browser chrome collapses.
-- [ ] **Touch affordances for linked cards.** Cards that link out (COTW,
-      robot arm, EPaper, Sofle, experiences, diplomas) only reveal it on
-      hover — invisible on touch. Add a visible cue (e.g., a small ↗ badge or
-      "visit" hint on the card).
+- [x] **Touch affordances for linked cards.** Done 2026-07-08: every linked
+      card shows an always-visible corner badge naming the destination
+      (Play / GitHub / Website / Program / Course + ↗), via a `link_label`
+      param on `sectioncards.html`. Unlinked cards show nothing.
 - [ ] **`text-justify` paragraphs on narrow columns** produce uneven word
       spacing ("rivers"). Consider `text-left` below `sm:` and keep justify on
       desktop.

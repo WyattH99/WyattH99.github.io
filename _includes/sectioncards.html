@@ -1,5 +1,8 @@
 <div class='flex items-center justify-center'>
   <div class="aspect-video rounded-xl relative group">
+        {% if include.link_label %}
+        <span class="absolute top-2 right-2 z-10 rounded-md bg-zinc-900/80 px-2 py-1 text-xs text-white group-hover:text-[#FAB406] transition-colors duration-300">{{ include.link_label }} ↗</span>
+        {% endif %}
         {% if include.video %}
         <video
             class="rounded-lg object-cover w-full aspect-video"
