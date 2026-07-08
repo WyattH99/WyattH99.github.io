@@ -72,9 +72,10 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
 
 Follow-ups the Lighthouse run surfaced (added 2026-07-08):
 
-- [ ] **Footer icon links have no accessible name** (a11y audit scored 0) —
-      on desktop the `<a>`s contain only an SVG (the text labels are
-      `md:hidden`). Add `aria-label` to the four footer links. (mechanical)
+- [x] **Footer icon links have no accessible name.** Done 2026-07-08:
+      aria-labels on the four footer links AND the header logo link (whose
+      text is hidden on mobile — it was the last failing node). Local
+      Lighthouse accessibility now **100**.
 - [ ] **Image format/sizing headroom (~0.8MB est):** serve the card JPEGs as
       WebP and/or add responsive `srcset` so phones don't download 1200px
       images for ~350px slots. Diminishing returns; do during some future
