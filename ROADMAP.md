@@ -62,8 +62,13 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       traffic ever matters (see analytics item), consider poster-until-tap on
       small screens / respect Save-Data, via a few lines of
       IntersectionObserver JS.
-- [ ] **Smallest widths:** check 320–375 px (iPhone SE) and ~280 px
-      (foldables) — the `text-6xl` section titles and header nav wrap.
+- [x] **Smallest widths.** Done 2026-07-08: the fixed `text-6xl` section
+      titles caused real horizontal overflow — 11px even at 375px
+      ("Certifications"), 39px at 320, 59px at 280. Titles are now fluid
+      `text-[min(3.75rem,11vw)]` (identical ≥546px, scales down below);
+      overflow is 0px at 280/320/375. Note: `min-[400px]:` variants don't
+      generate in this config (the `betterhover` raw screen disables them) —
+      that's why the fix uses an arbitrary value, not a breakpoint.
 - [x] **Acceptance bar:** run PageSpeed Insights (mobile, throttled) and keep
       a green score. Baseline 2026-07-08 (local Lighthouse at PSI defaults;
       anonymous PSI API was over quota): Performance 93 · Accessibility 95 ·
