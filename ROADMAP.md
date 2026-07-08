@@ -48,12 +48,13 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       card shows an always-visible corner badge naming the destination
       (Play / GitHub / Website / Program / Course + ↗), via a `link_label`
       param on `sectioncards.html`. Unlinked cards show nothing.
-- [ ] **`text-justify` paragraphs on narrow columns** produce uneven word
-      spacing ("rivers"). Consider `text-left` below `sm:` and keep justify on
-      desktop.
-- [ ] **Tap targets in the header nav** are small and tight on phones
-      (`text-sm p-1`, four links). Lighthouse flags sub-48px targets; pad them
-      on mobile.
+- [x] **`text-justify` paragraphs on narrow columns.** Done 2026-07-08:
+      card paragraphs and the landing bio are `text-left md:text-justify` —
+      left-aligned on phones, justified from md up.
+- [x] **Tap targets in the header nav.** Done 2026-07-08: padding moved
+      from the `<li>` (which never extended the hit area) onto the `<a>` —
+      36×64 px targets on mobile, unchanged look on desktop; mobile anchor
+      offset bumped to scroll-mt-32 for the taller header.
 - [ ] **Sticky footer costs viewport height on phones** — and it's taller on
       mobile because the icon labels show (`md:hidden`). Consider making it
       non-sticky below `md:`.
