@@ -64,8 +64,24 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       IntersectionObserver JS.
 - [ ] **Smallest widths:** check 320–375 px (iPhone SE) and ~280 px
       (foldables) — the `text-6xl` section titles and header nav wrap.
-- [ ] **Acceptance bar:** run PageSpeed Insights (mobile, throttled) and keep
-      a green score — today's measurements were desktop-network only.
+- [x] **Acceptance bar:** run PageSpeed Insights (mobile, throttled) and keep
+      a green score. Baseline 2026-07-08 (local Lighthouse at PSI defaults;
+      anonymous PSI API was over quota): **Performance 93 · Accessibility 95 ·
+      Best Practices 100 · SEO 100**; FCP 0.9s, LCP 2.5s, TBT 220ms, CLS 0,
+      payload 2.9MB. Re-run after big changes and keep ≥90.
+
+Follow-ups the Lighthouse run surfaced (added 2026-07-08):
+
+- [ ] **Footer icon links have no accessible name** (a11y audit scored 0) —
+      on desktop the `<a>`s contain only an SVG (the text labels are
+      `md:hidden`). Add `aria-label` to the four footer links. (mechanical)
+- [ ] **Image format/sizing headroom (~0.8MB est):** serve the card JPEGs as
+      WebP and/or add responsive `srcset` so phones don't download 1200px
+      images for ~350px slots. Diminishing returns; do during some future
+      image touch-up. (mechanical)
+- [ ] **"Efficient cache lifetimes" finding (~2.6MB)** is the known GitHub
+      Pages 10-minute max-age — unfixable without the custom domain + CDN
+      item above; listed here so future runs aren't re-investigated.
 
 ## UX polish (added 2026-07-03)
 
