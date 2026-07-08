@@ -55,9 +55,9 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       from the `<li>` (which never extended the hit area) onto the `<a>` —
       36×64 px targets on mobile, unchanged look on desktop; mobile anchor
       offset bumped to scroll-mt-32 for the taller header.
-- [ ] **Sticky footer costs viewport height on phones** — and it's taller on
-      mobile because the icon labels show (`md:hidden`). Consider making it
-      non-sticky below `md:`.
+- [x] **Sticky footer costs viewport height on phones.** Done 2026-07-08:
+      `sticky` → `md:sticky`, so the footer scrolls with the page on phones
+      (full viewport for content) and stays pinned on desktop.
 - [ ] **Cellular data cost:** ~2 MB of video autoplays on load. If mobile
       traffic ever matters (see analytics item), consider poster-until-tap on
       small screens / respect Save-Data, via a few lines of
