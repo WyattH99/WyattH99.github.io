@@ -30,17 +30,42 @@
     }
     </script>
     <script>
-      // prefers-reduced-motion: stop the project videos from autoplaying and
-      // surface controls instead, so they stay watchable on demand.
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        addEventListener('DOMContentLoaded', function () {
-          document.querySelectorAll('video[autoplay]').forEach(function (v) {
-            v.removeAttribute('autoplay');
-            v.pause();
+      // Project videos load lazily: nothing downloads until a video nears the
+      // viewport, then it starts playing (muted, inline). Save-Data / 2G /
+      // prefers-reduced-motion users get poster-until-tap instead — src is set
+      // with preload="none", so pressing play is what triggers the download.
+      addEventListener('DOMContentLoaded', function () {
+        var conn = navigator.connection || {};
+        var frugal =
+          conn.saveData ||
+          /(^|-)2g$/.test(conn.effectiveType || '') ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var vids = document.querySelectorAll('video[data-src]');
+        if (frugal || !('IntersectionObserver' in window)) {
+          vids.forEach(function (v) {
+            v.src = v.dataset.src;
             v.controls = true;
           });
+          return;
+        }
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              var v = e.target;
+              io.unobserve(v);
+              v.src = v.dataset.src;
+              v.play().catch(function () {
+                v.controls = true;
+              });
+            });
+          },
+          { rootMargin: '400px' }
+        );
+        vids.forEach(function (v) {
+          io.observe(v);
         });
-      }
+      });
     </script>
 </head>
 <body>

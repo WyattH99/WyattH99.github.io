@@ -6,10 +6,11 @@
         {% if include.video %}
         <video
             class="rounded-lg object-cover w-full aspect-video"
-            autoplay loop muted playsinline
+            loop muted playsinline
+            preload="none"
             poster="{{ include.poster }}"
-            aria-label="{{ include.heading }}">
-            <source src="{{ include.video }}" type="video/webm">
+            aria-label="{{ include.heading }}"
+            data-src="{{ include.video }}">
         </video>
         {% else %}
         {% assign picture_small = include.picture | replace: '.webp', '-600.webp' %}

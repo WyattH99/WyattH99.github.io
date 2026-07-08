@@ -58,10 +58,12 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
 - [x] **Sticky footer costs viewport height on phones.** Done 2026-07-08:
       `sticky` → `md:sticky`, so the footer scrolls with the page on phones
       (full viewport for content) and stays pinned on desktop.
-- [ ] **Cellular data cost:** ~2 MB of video autoplays on load. If mobile
-      traffic ever matters (see analytics item), consider poster-until-tap on
-      small screens / respect Save-Data, via a few lines of
-      IntersectionObserver JS.
+- [x] **Cellular data cost.** Done 2026-07-08: videos are lazy — zero video
+      bytes at page load; an IntersectionObserver (400px margin) sets src and
+      plays when a video nears the viewport. Save-Data / 2G /
+      prefers-reduced-motion users get poster-until-tap with controls
+      (`preload="none"`, so pressing play triggers the download). Verified:
+      normal path autoplays on scroll; frugal paths fetch nothing until play.
 - [x] **Smallest widths.** Done 2026-07-08: the fixed `text-6xl` section
       titles caused real horizontal overflow — 11px even at 375px
       ("Certifications"), 39px at 320, 59px at 280. Titles are now fluid
