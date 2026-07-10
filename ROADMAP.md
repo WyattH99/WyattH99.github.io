@@ -1,9 +1,9 @@
 # Roadmap
 
-Parking lot from the 2026-07-03 performance/content session — items to discuss
-and prioritize later, none committed work yet. Ordered roughly by value.
-"(needs Wyatt)" = facts/decisions only Wyatt has; "(mechanical)" = can be done
-straight away once green-lit.
+Originally the parking lot from the 2026-07-03 performance/content session.
+As of 2026-07-10 every item is resolved — done, or explicitly declined with a
+note — so this file now serves as the decision record. Traps and conventions
+documented in the notes below still apply to future work.
 
 ## Content — the highest-value work left (added 2026-07-03)
 
@@ -38,10 +38,10 @@ perf pass); what's left that moves the needle is content.
 The layout is responsive and was spot-checked at 390px, but it has never had
 a deliberate mobile pass. Do a real-device audit, then fix what it finds:
 
-- [ ] **Real-device pass: iOS Safari (iPhone AND iPad) + Android Chrome.**
-      2026-07-10: Wyatt checked his iPhone — looks good (footer preference
-      reverted, see below). Still open: iPad, Android, Low Power Mode.
-      Specific things to verify:
+- [x] **Real-device pass.** Closed 2026-07-10: Wyatt verified on his iPhone
+      (looks good; footer preference reverted and mobile header reorganized
+      from his feedback) and declared the remaining iPad / Android / Low
+      Power Mode checks done. Original checklist kept for reference:
       - The project **videos are WebM/VP8** — old iOS (< 16.4) can't play
         WebM and will show only the poster frame. Acceptable fallback, but
         confirm on real devices; if any that matter fail, add an MP4/H.264
@@ -137,6 +137,5 @@ on wyatth99.github.io with no visitor tracking. Don't re-propose.
       Done 2026-07-06.
 - [x] **`404.html`** — was GitHub's generic 404. Done 2026-07-06: styled page
       using the default layout.
-- [ ] **COTW code link (optional):** the card says "play it live"; if the
-      `WyattH99/cotw` repo ever goes public, add a "code on GitHub" line to
-      the card. (needs Wyatt: decision)
+- [x] **COTW code link.** Declined 2026-07-10: the cotw repo stays private;
+      the card's "play it live" link stands alone. Don't re-propose.
