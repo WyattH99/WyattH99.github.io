@@ -18,8 +18,9 @@ perf pass); what's left that moves the needle is content.
       Accelsius card (Embedded Software Engineer, May 2024 – Present; EE II
       since Apr 2026) leads the section, from Wyatt's LinkedIn bullets; the
       landing bio and JSON-LD jobTitle/worksFor now name Accelsius too.
-      Open question: whether to card dkCrew, LLC (IT Admin & Ops Manager,
-      Mar 2020 – Apr 2024) — needs a blurb + logo from Wyatt.
+      2026-07-10 follow-up: dkCrew, LLC carded (typeset text tile; copy
+      strictly from the LinkedIn title/dates) and the Genesis paragraph
+      merged with LinkedIn's fuller 3D-printing R&D description.
 - [ ] **Update the resume PDF** (`assets/WyattHansen_Resume.pdf`). (needs
       Wyatt) The footer links it prominently and it predates COTW and the MSE.
       A stale PDF undercuts the site.
