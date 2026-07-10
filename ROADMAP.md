@@ -14,9 +14,12 @@ perf pass); what's left that moves the needle is content.
       the UT Austin MSE, the embedded foundation, and COTW (including the
       AI-directed development framing). Grounded only in facts already on the
       site — revise if any phrasing feels off.
-- [ ] **Bring the Experiences section past 2021.** (needs Wyatt) It currently
-      ends at internships + BUILD, implying the career paused. Add full-time
-      roles: names, dates, one-liners, a photo/logo each.
+- [x] **Bring the Experiences section past 2021.** Done 2026-07-10:
+      Accelsius card (Embedded Software Engineer, May 2024 – Present; EE II
+      since Apr 2026) leads the section, from Wyatt's LinkedIn bullets; the
+      landing bio and JSON-LD jobTitle/worksFor now name Accelsius too.
+      Open question: whether to card dkCrew, LLC (IT Admin & Ops Manager,
+      Mar 2020 – Apr 2024) — needs a blurb + logo from Wyatt.
 - [ ] **Update the resume PDF** (`assets/WyattHansen_Resume.pdf`). (needs
       Wyatt) The footer links it prominently and it predates COTW and the MSE.
       A stale PDF undercuts the site.

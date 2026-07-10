@@ -3,7 +3,13 @@
     {% include sectiontitle.html section_title="Experiences" %}
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
-        
+
+        <a href="https://accelsius.com" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
+            {% include sectioncards.html link_label="Website" picture="./assets/Experiences/Accelsius.webp" tags="Embedded Linux, STM32, C/C++, Firmware Tooling, Product Demos"
+                heading="Accelsius"
+                paragraph="As an Embedded Software Engineer at Accelsius (May 2024 – Present, Embedded Software Engineer II since April 2026), I design and deploy embedded Linux services and STM32 firmware applications for two-phase direct-to-chip liquid cooling systems that keep AI and HPC data centers running. I have led over 50 live product demonstrations across three product lines, translating complex embedded architectures for customers and executive stakeholders, and I enhance mission-critical infrastructure and firmware tooling to improve reliability and scalability across the product stack." %}
+        </a>
+
         {% include sectioncards.html picture="./assets/Experiences/GenesisDimensions.webp"
             heading="Genesis Dimensions" 
             paragraph="As an Engineering Intern, I achieved the successful installation and deployment of Taiga, an open-source Agile project management tool, on in-house servers, significantly elevating project coordination and management capabilities. Additionally, I provided valuable support in the manufacturing and integration of industrial control panels for a Kuka Robot and a Material Flow Control System." %}
