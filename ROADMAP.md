@@ -99,9 +99,10 @@ Follow-ups the Lighthouse run surfaced (added 2026-07-08):
       poster, and the headshot is WebP with a 600px variant; sectioncards
       derives `srcset`/`sizes` from the picture path. Desktop 1x pulls the
       600px files, 3x phones the full size. LCP 2.5s → 1.6s.
-- [ ] **"Efficient cache lifetimes" finding (~2.6MB)** is the known GitHub
-      Pages 10-minute max-age — unfixable without the custom domain + CDN
-      item above; listed here so future runs aren't re-investigated.
+- [x] **"Efficient cache lifetimes" finding** is the known GitHub Pages
+      10-minute max-age. Permanent won't-fix: the only lever is a custom
+      domain + CDN, which Wyatt declined 2026-07-10. Ignore in future
+      Lighthouse runs.
 
 ## UX polish (added 2026-07-03)
 
@@ -123,13 +124,8 @@ Follow-ups the Lighthouse run surfaced (added 2026-07-08):
 - [x] **JSON-LD `Person` structured data** linking the site, GitHub, and
       LinkedIn. Done 2026-07-06 in `default.html` (name, image, alumniOf,
       sameAs).
-- [ ] **Custom domain** (~$10/yr, e.g. wyatthansen.dev). Looks better on a
-      resume than wyatth99.github.io, and fronting it with Cloudflare fixes
-      the one perf lever GitHub Pages won't (fixed 10-min cache headers).
-      (needs Wyatt: buy the domain)
-- [ ] **Analytics** — currently zero visibility into visits. GoatCounter or
-      Cloudflare analytics are free and cookie-banner-free (same reasoning as
-      COTW's no-banner decision). (needs Wyatt: pick provider)
+Declined 2026-07-10 (Wyatt): custom domain and analytics — the site stays
+on wyatth99.github.io with no visitor tracking. Don't re-propose.
 
 ## Housekeeping (added 2026-07-03)
 
