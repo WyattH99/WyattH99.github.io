@@ -23,9 +23,10 @@ perf pass); what's left that moves the needle is content.
 - [ ] **Add the two orphaned projects.** (needs Wyatt: 2–3 sentences each)
       `HomeSecuritySystemAndGateOpener.jpg` and `7SegmentDisplay.jpg` sit in
       assets with no cards.
-- [ ] **Tech-tag chips on project cards** (`STM32` `React` `FPGA` `RTOS` …).
-      (mechanical once tags are picked) Recruiters skim; dense paragraphs hide
-      the keywords. Small `sectioncards.html` extension.
+- [x] **Tech-tag chips on project cards.** Done 2026-07-10: optional `tags`
+      param on `sectioncards.html` renders a pill row under the heading; all
+      13 project cards tagged (Wyatt-approved list, derived strictly from
+      each card's own text). Diplomas/Experiences intentionally untagged.
 
 ## Mobile experience (added 2026-07-03)
 
