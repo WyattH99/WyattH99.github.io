@@ -21,9 +21,11 @@ perf pass); what's left that moves the needle is content.
       2026-07-10 follow-up: dkCrew, LLC carded (typeset text tile; copy
       strictly from the LinkedIn title/dates) and the Genesis paragraph
       merged with LinkedIn's fuller 3D-printing R&D description.
-- [ ] **Update the resume PDF** (`assets/WyattHansen_Resume.pdf`). (needs
-      Wyatt) The footer links it prominently and it predates COTW and the MSE.
-      A stale PDF undercuts the site.
+- [x] **Update the resume PDF.** Done 2026-07-10: fresh one-page resume
+      (Accelsius EE II + promotion, comms-stack ownership, Snapshot, debug
+      tooling, MSE coursework, COTW project, certifications) drafted from the
+      old PDF + LinkedIn, reviewed via artifact, rendered by headless Chrome.
+      Old resume archived at `assets/archive/WyattHansen_Resume_2025-12.pdf`.
 - [x] **Add the two orphaned projects.** Resolved 2026-07-10: Wyatt says
       neither project went anywhere — both images deleted instead of carded.
 - [x] **Tech-tag chips on project cards.** Done 2026-07-10: optional `tags`
