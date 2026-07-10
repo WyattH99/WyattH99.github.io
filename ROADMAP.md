@@ -39,6 +39,8 @@ The layout is responsive and was spot-checked at 390px, but it has never had
 a deliberate mobile pass. Do a real-device audit, then fix what it finds:
 
 - [ ] **Real-device pass: iOS Safari (iPhone AND iPad) + Android Chrome.**
+      2026-07-10: Wyatt checked his iPhone — looks good (footer preference
+      reverted, see below). Still open: iPad, Android, Low Power Mode.
       Specific things to verify:
       - The project **videos are WebM/VP8** — old iOS (< 16.4) can't play
         WebM and will show only the poster frame. Acceptable fallback, but
@@ -61,9 +63,9 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       from the `<li>` (which never extended the hit area) onto the `<a>` —
       36×64 px targets on mobile, unchanged look on desktop; mobile anchor
       offset bumped to scroll-mt-32 for the taller header.
-- [x] **Sticky footer costs viewport height on phones.** Done 2026-07-08:
-      `sticky` → `md:sticky`, so the footer scrolls with the page on phones
-      (full viewport for content) and stays pinned on desktop.
+- [x] **Sticky footer costs viewport height on phones.** Done 2026-07-08
+      (`md:sticky`), then REVERTED 2026-07-10: Wyatt tested on his phone and
+      prefers the footer pinned while scrolling — back to `sticky` everywhere.
 - [x] **Cellular data cost.** Done 2026-07-08: videos are lazy — zero video
       bytes at page load; an IntersectionObserver (400px margin) sets src and
       plays when a video nears the viewport. Save-Data / 2G /
