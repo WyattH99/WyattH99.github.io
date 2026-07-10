@@ -110,8 +110,9 @@ Follow-ups the Lighthouse run surfaced (added 2026-07-08):
 - [x] **Heading hierarchy.** Done 2026-07-06: one `h1` (landing name), `h2`
       section titles, `h3` card headings; the header logo text and landing
       bio are no longer headings.
-- [ ] **Page title:** "Wyatt Hansen" → "Wyatt Hansen — Software & Embedded
-      Systems Engineer" (or similar). (needs Wyatt: pick the phrasing)
+- [x] **Page title.** Done 2026-07-10: "Wyatt Hansen — Software & Embedded
+      Systems Engineer" in the browser tab, og:title, and JSON-LD jobTitle
+      (which was deferred until this phrasing was picked).
 - [x] **JSON-LD `Person` structured data** linking the site, GitHub, and
       LinkedIn. Done 2026-07-06 in `default.html` (name, image, alumniOf,
       sameAs).
