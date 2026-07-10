@@ -20,9 +20,8 @@ perf pass); what's left that moves the needle is content.
 - [ ] **Update the resume PDF** (`assets/WyattHansen_Resume.pdf`). (needs
       Wyatt) The footer links it prominently and it predates COTW and the MSE.
       A stale PDF undercuts the site.
-- [ ] **Add the two orphaned projects.** (needs Wyatt: 2–3 sentences each)
-      `HomeSecuritySystemAndGateOpener.jpg` and `7SegmentDisplay.jpg` sit in
-      assets with no cards.
+- [x] **Add the two orphaned projects.** Resolved 2026-07-10: Wyatt says
+      neither project went anywhere — both images deleted instead of carded.
 - [x] **Tech-tag chips on project cards.** Done 2026-07-10: optional `tags`
       param on `sectioncards.html` renders a pill row under the heading; all
       13 project cards tagged (Wyatt-approved list, derived strictly from
