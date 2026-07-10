@@ -1,5 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  future: {
+    // Wrap hover: variants in @media (hover: hover) so taps on touch
+    // screens don't leave elements stuck in their hover state.
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./_includes/**/*.html",
     "./_layouts/**/*.html",
@@ -8,11 +13,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-          'betterhover': {'raw': '(hover: hover)'},
-      }
+      colors: {
+        accent: '#FAB406',
+      },
     },
   },
   plugins: [],
 }
-

@@ -76,9 +76,12 @@ a deliberate mobile pass. Do a real-device audit, then fix what it finds:
       titles caused real horizontal overflow — 11px even at 375px
       ("Certifications"), 39px at 320, 59px at 280. Titles are now fluid
       `text-[min(3.75rem,11vw)]` (identical ≥546px, scales down below);
-      overflow is 0px at 280/320/375. Note: `min-[400px]:` variants don't
-      generate in this config (the `betterhover` raw screen disables them) —
+      overflow is 0px at 280/320/375. Note: `min-[400px]:` variants didn't
+      generate in this config (the `betterhover` raw screen disabled them) —
       that's why the fix uses an arbitrary value, not a breakpoint.
+      Update 2026-07-10: the unused `betterhover` screen was removed (replaced
+      by `future.hoverOnlyWhenSupported`), so `min-[...]`/`max-[...]` variants
+      generate normally again.
 - [x] **Acceptance bar:** run PageSpeed Insights (mobile, throttled) and keep
       a green score. Baseline 2026-07-08 (local Lighthouse at PSI defaults;
       anonymous PSI API was over quota): Performance 93 · Accessibility 95 ·

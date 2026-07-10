@@ -1,40 +1,60 @@
-<div class='flex items-center justify-center'>
+{% comment %}
+  Renders one card from a _data/*.yml entry, passed as card=...
+  Keys: heading, paragraph; optional: url (wraps the whole card in a
+  new-tab link), link_label (corner badge text), tags (comma-separated),
+  wide (card spans both grid columns), and either picture or video+poster.
+  Picture cards assume a 600px-wide variant exists next to the full-size
+  file, named X-600.webp for X.webp — the srcset below points at it, so
+  create both files when adding a card or browsers may fetch a 404.
+{% endcomment %}
+{% assign card = include.card %}
+{% if card.url %}
+<a href="{{ card.url }}" target="_blank" rel="noopener" class="{% if card.wide %}sm:col-span-2 {% endif %}transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 hover:outline hover:outline-2 hover:outline-white rounded-xl">
+{% elsif card.wide %}
+<div class="sm:col-span-2">
+{% endif %}
+<div class="flex items-center justify-center">
   <div class="aspect-video rounded-xl relative group">
-        {% if include.link_label %}
-        <span class="absolute top-2 right-2 z-10 rounded-md bg-zinc-900/80 px-2 py-1 text-xs text-white group-hover:text-[#FAB406] transition-colors duration-300">{{ include.link_label }} ↗</span>
+        {% if card.link_label %}
+        <span class="absolute top-2 right-2 z-10 rounded-md bg-zinc-900/80 px-2 py-1 text-xs text-white group-hover:text-accent transition-colors duration-300">{{ card.link_label }} ↗</span>
         {% endif %}
-        {% if include.video %}
+        {% if card.video %}
         <video
             class="rounded-lg object-cover w-full aspect-video"
             loop muted playsinline
             preload="none"
-            poster="{{ include.poster }}"
-            aria-label="{{ include.heading }}"
-            data-src="{{ include.video }}">
+            poster="{{ card.poster }}"
+            aria-label="{{ card.heading }}"
+            data-src="{{ card.video }}">
         </video>
         {% else %}
-        {% assign picture_small = include.picture | replace: '.webp', '-600.webp' %}
+        {% assign picture_small = card.picture | replace: '.webp', '-600.webp' %}
         <img
-            alt="{{ include.heading }}"
+            alt="{{ card.heading }}"
             class="rounded-lg object-cover w-full aspect-video"
             loading="lazy"
             decoding="async"
-            src="{{ include.picture }}"
-            srcset="{{ picture_small }} 600w, {{ include.picture }} 1200w"
+            src="{{ card.picture }}"
+            srcset="{{ picture_small }} 600w, {{ card.picture }} 1200w"
             sizes="(min-width: 640px) 480px, 100vw"
             />
         {% endif %}
-            <div class="space-y-3 text-xl ">
-                <h3 class="font-bold">{{ include.heading }}</h3>
-                {% if include.tags %}
+            <div class="space-y-3 text-xl">
+                <h3 class="font-bold">{{ card.heading }}</h3>
+                {% if card.tags %}
                 <div class="flex flex-wrap justify-center gap-1.5">
-                    {% assign tag_list = include.tags | split: "," %}
+                    {% assign tag_list = card.tags | split: "," %}
                     {% for tag in tag_list %}
                     <span class="rounded-md border border-white/20 bg-white/10 px-2 py-0.5 text-xs text-white/90">{{ tag | strip }}</span>
                     {% endfor %}
                 </div>
                 {% endif %}
-                <div class="text-left md:text-justify opacity-80 text-sm">{{ include.paragraph }}</div>
+                <div class="text-left md:text-justify opacity-80 text-sm">{{ card.paragraph }}</div>
             </div>
     </div>
- </div>
+</div>
+{% if card.url %}
+</a>
+{% elsif card.wide %}
+</div>
+{% endif %}

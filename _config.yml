@@ -13,7 +13,6 @@ repository: WyattH99/WyattH99.github.io
 # Build settings
 # github-pages gem handles most of the build settings for Jekyll on GitHub Pages
 plugins:
-  - jekyll-feed
   - jekyll-github-metadata
 
 # Exclude from processing.

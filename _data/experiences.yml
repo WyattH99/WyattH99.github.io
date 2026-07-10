@@ -1,0 +1,60 @@
+# Cards for the Experiences section. See _includes/sectioncards.html
+# for the full list of keys.
+- heading: Accelsius
+  url: https://accelsius.com
+  link_label: Website
+  picture: ./assets/Experiences/Accelsius.webp
+  tags: "Embedded Linux, STM32, C/C++, BACnet / Modbus / SNMP, Firmware Tooling, Product Demos"
+  paragraph: >-
+    As an Embedded Software Engineer at Accelsius (May 2024 – Present, Embedded
+    Software Engineer II since April 2026), I design and deploy embedded Linux
+    services and STM32 firmware applications for two-phase direct-to-chip liquid
+    cooling systems that keep AI and HPC data centers running. I own the
+    customer-facing communication stacks — BACnet, Modbus, and SNMP — that integrate
+    our systems with building-management and monitoring software, and I developed
+    'Snapshot', a fault-triggered flight recorder that captures every sensor and
+    fault data point around a fault for retrospective root-cause analysis. I have
+    also led over 50 live product demonstrations across three product lines,
+    translating complex embedded architectures for customers and executive
+    stakeholders.
+
+- heading: "dkCrew, LLC"
+  picture: ./assets/Experiences/dkCrew.webp
+  tags: "IT Administration, Operations"
+  paragraph: >-
+    As the IT Administrator and Operations Manager at dkCrew, LLC in Splendora,
+    Texas (March 2020 – April 2024), I was responsible for the company's IT
+    infrastructure and day-to-day operations, administering the systems the business
+    ran on and managing operational workflows over my four years with the company.
+
+- heading: Genesis Dimensions
+  picture: ./assets/Experiences/GenesisDimensions.webp
+  paragraph: >-
+    Across four internship placements with Genesis Dimensions (Summer 2017, Summer
+    2020, Winter 2020, and Summer 2021), I collaborated closely with engineers
+    supporting Research and Development for a large-scale 3D printing project,
+    utilizing industrial robots and novel materials developed by in-house material
+    scientists. I also deployed Taiga, an open-source Agile project management tool,
+    on in-house servers to improve project coordination, and supported the
+    manufacturing and integration of industrial control panels for a Kuka Robot and
+    a Material Flow Control System.
+
+- heading: Arrington Automation
+  url: https://www.arringtonautomation.com/
+  link_label: Website
+  picture: ./assets/Experiences/ArringtonAutomation.webp
+  paragraph: >-
+    As an Engineering Intern I collaborated with a team of engineers to contribute
+    to the design, testing, manufacturing, and integration processes of control
+    panels for industrial control systems.
+
+- heading: BUILD
+  url: https://www.buildtamu.com/
+  link_label: Website
+  picture: ./assets/Experiences/BUILD.webp
+  paragraph: >-
+    During my dedicated three-year tenure as a volunteer with Build, I held the
+    pivotal role of Design Command Team Leader and was an integral member of the
+    Construction Command Team. Build is a student-led philanthropic organization
+    dedicated to the construction of medical clinics in third-world countries,
+    fostering unity and purpose within the student body.

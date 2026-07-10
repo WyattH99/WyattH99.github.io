@@ -12,7 +12,7 @@
     "start:postcss": "postcss _site/assets/styles/*.css --dir _site/assets --watch",
     "build": "run-s clean build:jekyll build:postcss",
     "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",
-    "build:postcss": "cross-env NODE_ENV=production postcss _site/assets/styles/*.css --dir _site/assets",
+    "build:postcss": "cross-env NODE_ENV=production postcss _site/assets/styles/*.css --dir _site/assets && rimraf _site/assets/styles",
     "clean": "rimraf _site"
   },
   "repository": {

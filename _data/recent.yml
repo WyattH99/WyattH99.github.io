@@ -1,0 +1,21 @@
+# Cards for the Recent Projects section. See _includes/sectioncards.html
+# for the full list of keys.
+- heading: Countries of the World Game
+  url: https://countriesofthe.world
+  link_label: Play
+  wide: true
+  video: ./assets/EngineeringProjects/CountriesOfTheWorld.webm
+  poster: ./assets/EngineeringProjects/CountriesOfTheWorld_poster.webp
+  tags: "React, TypeScript, WebGL2, Node, Postgres, SSE, AI-Directed (Claude Code)"
+  paragraph: >-
+    Designed and launched a multiplayer geography game where players race the clock
+    to type or find all 197 countries on an ASCII-art world map, featuring eight game
+    modes across the modern world, five historical eras, Pangaea, and the US states.
+    I developed this project entirely by directing AI coding agents (Claude Code):
+    I owned the product direction, specified the features and gameplay rules, made
+    the architecture decisions, reviewed the generated code, and tested every release
+    on real desktop and mobile devices. The game runs on React and TypeScript with a
+    WebGL2 map renderer, and a Hono and Node backend handling real-time multiplayer
+    over Server-Sent Events, worldwide Postgres leaderboards, and anti-cheat telemetry.
+    Deployed and operated in production on DigitalOcean behind Cloudflare. Check it
+    out and play a game at countriesofthe.world!

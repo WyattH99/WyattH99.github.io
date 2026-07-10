@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#18181b">
     <title>{{ page.title | escape }}</title>
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
     <meta name="description" content="{{ site.description | strip }}">
@@ -73,9 +74,13 @@
 <body>
     <div class="min-h-screen flex flex-col justify-between">
 
+        <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[60] focus:rounded-md focus:bg-zinc-900 focus:px-4 focus:py-2 focus:text-accent">Skip to content</a>
+
         {% include header.html %}
 
+        <main id="main" class="grow flex flex-col scroll-mt-32 md:scroll-mt-14">
         {{ content }}
+        </main>
 
         {% include footer.html %}
 

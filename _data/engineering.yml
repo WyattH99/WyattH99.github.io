@@ -1,0 +1,66 @@
+# Cards for the Engineering Projects section. See _includes/sectioncards.html
+# for the full list of keys.
+- heading: STM32 Robotic Arm Project
+  url: https://github.com/WyattH99/RobotArm_stm32
+  link_label: GitHub
+  video: ./assets/EngineeringProjects/RobotArm_stm32.webm
+  poster: ./assets/EngineeringProjects/RobotArm_stm32_poster.webp
+  tags: "STM32, ADC, I2C, Servo Control, 3D Printing"
+  paragraph: >-
+    3D Printed Robotic Arm with a STM32 micro-controller, integrating a smaller robot
+    as the primary controller using a Super Loop Control methodology. Using STM32 HAL,
+    I mapped the readings of the Potentiometers using the ADC Peripheral to control
+    the servos through a Servo Driver with I2C communication. Credits: YouTube Channel
+    'Build Some Stuff' - Robotic Arm Design and STL files for 3D Printing, Github User
+    'Lamik' - PCA9685 Servo Driver for STM32. Check out the code on my GitHub!
+
+- heading: Camera and Lidar Data Synchronization
+  picture: ./assets/EngineeringProjects/CameraAndLidarDataSynchronization.webp
+  tags: "Sensor Fusion, LiDAR, ROS, Python, Team Lead"
+  paragraph: >-
+    As the Team Lead, I spearheaded my Senior Project, overseeing the successful
+    synchronization and visualization of data originating from a Camera and Lidar
+    in conjunction with the precise PPS signal from an external GPS, a sophisticated
+    process commonly referred to as Sensor Fusion. The project leveraged ROSpy and
+    RViz for advanced data visualization.
+
+- heading: EPaper Display
+  url: https://github.com/WyattH99/epaper
+  link_label: GitHub
+  picture: ./assets/EngineeringProjects/epaper.webp
+  tags: "Raspberry Pi, Python, SPI, GPIO, systemd"
+  paragraph: >-
+    Developed an ambient progress tracker using a Raspberry Pi and e-paper display,
+    interfacing with the hardware via SPI and GPIO. Built a Python application that
+    scrapes Advent of Code progress data, processes it into a visual format, and
+    renders it to the display. Automated updates through cron scheduling with systemd
+    integration for persistence across reboots. Check out the code on my GitHub!
+
+- heading: Line Following Robot
+  picture: ./assets/EngineeringProjects/LineFollowingRobot2.webp
+  tags: "FPGA, Digital Logic, Motor Control"
+  paragraph: >-
+    Designed and developed an autonomous car utilizing a Xilinx BASYS 3 FPGA, 2 DC
+    motors, and Capacitance Sensors, enabling it to autonomously track and follow a
+    5V current-carrying wire on the floor. Collaborated closely with a team of two
+    engineering students to successfully complete this project for my Digital
+    Electronics Class.
+
+- heading: WiFi Controlled Car
+  picture: ./assets/EngineeringProjects/WiFiControlledCar.webp
+  tags: "TI CC3200, PWM, WiFi, Motor Control, 3D Printing"
+  paragraph: >-
+    Successfully implementing motor control for four DC motors through the generation
+    of PWM signals via a TI Launchpad CC3200-LAUNCHXL, enabling wireless control over
+    WiFi. A 3D printer was also utilized to manufacture the mechanical frame.
+    Collaborated effectively with a team of four engineering students for the
+    completion of the project for my Foundations of Engineering 112 Class.
+
+- heading: Table Rover
+  picture: ./assets/EngineeringProjects/TableRover.webp
+  tags: "LEGO EV3, Ultrasonic Sensor, Robotics"
+  paragraph: >-
+    Lego MINDSTORMS EV3 was used to build a Table Rover with an Ultrasonic Sensor to
+    detect the edge of the table and turn without falling off. This project was
+    completed as a team of 3 engineering students, for my Foundations of Engineering
+    111 class.

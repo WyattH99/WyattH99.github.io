@@ -1,0 +1,52 @@
+# Cards for the Personal Projects section. See _includes/sectioncards.html
+# for the full list of keys.
+- heading: Sofle Keyboard
+  url: https://github.com/WyattH99/SoflRGBv2.1
+  link_label: GitHub
+  picture: ./assets/PersonalProjects/SofleKeyboard.webp
+  tags: "Electronics, Soldering"
+  paragraph: >-
+    Constructed the Sofle Keyboard as a means to further my expertise in electronics,
+    soldering, and programming. With the keyboard completed my next goal is to develop
+    custom firmware for the keyboard.
+
+- heading: Stirling Engine
+  picture: ./assets/PersonalProjects/SterlingEngine1.webp
+  tags: "CNC Machining, Milling, Lathe, SkillsUSA"
+  paragraph: >-
+    In my high school education, I actively participated in Skills USA and this engine
+    achieved qualification for the State Competition in 2017. I meticulously crafted
+    all engine components using a combination of CNC along with manual milling and
+    lathe techniques. Additionally, I excelled in the Manual and Automated Machinist
+    Competition.
+
+- heading: Pneumatic Engine
+  picture: ./assets/PersonalProjects/PneumaticEngine.webp
+  tags: "Machining, Lathe, Milling"
+  paragraph: >-
+    During my high school education, I successfully completed the construction of this
+    engine, which was showcased at the Montgomery County Fair. The project involved
+    the skilled utilization of metal and wood lathes as well as milling equipment.
+
+- heading: 3D Printed Quad-copter
+  picture: ./assets/PersonalProjects/3DPrintedDrone2.webp
+  tags: "3D Printing, RC Electronics, Drone"
+  paragraph: >-
+    During my high school education, driven by a passion for electronics and a keen
+    interest in 3D printing technology, I constructed an RC Quad-copter.
+
+- heading: Pecky Cypress Epoxy Pebble Foyer Table
+  picture: ./assets/PersonalProjects/PeckyCypressEpoxyPebbleFoyerTable.webp
+  tags: "Woodworking, Epoxy"
+  paragraph: >-
+    I also accomplished the construction of this table, which served as a featured
+    exhibit at the Montgomery County Fair during my high school education. This
+    endeavor encompassed a diverse range of woodworking techniques, tools, and
+    machinery.
+
+- heading: 3D Printers
+  picture: ./assets/PersonalProjects/3DPrinting2.webp
+  tags: "3D Printing, CAD"
+  paragraph: >-
+    During my high school education, I procured my initial 3D printer, sparking a
+    prolific journey of creating numerous models and prints using CAD software.

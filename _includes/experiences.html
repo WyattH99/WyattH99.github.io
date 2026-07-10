@@ -1,35 +1,11 @@
 <section id="Experiences" class="scroll-mt-32 md:scroll-mt-14 bg-zinc-900 w-full text-white text-center px-4 py-8 md:px-8 flex flex-col items-center">
-    
+
     {% include sectiontitle.html section_title="Experiences" %}
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
-
-        <a href="https://accelsius.com" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
-            {% include sectioncards.html link_label="Website" picture="./assets/Experiences/Accelsius.webp" tags="Embedded Linux, STM32, C/C++, BACnet / Modbus / SNMP, Firmware Tooling, Product Demos"
-                heading="Accelsius"
-                paragraph="As an Embedded Software Engineer at Accelsius (May 2024 – Present, Embedded Software Engineer II since April 2026), I design and deploy embedded Linux services and STM32 firmware applications for two-phase direct-to-chip liquid cooling systems that keep AI and HPC data centers running. I own the customer-facing communication stacks — BACnet, Modbus, and SNMP — that integrate our systems with building-management and monitoring software, and I developed 'Snapshot', a fault-triggered flight recorder that captures every sensor and fault data point around a fault for retrospective root-cause analysis. I have also led over 50 live product demonstrations across three product lines, translating complex embedded architectures for customers and executive stakeholders." %}
-        </a>
-
-        {% include sectioncards.html picture="./assets/Experiences/dkCrew.webp" tags="IT Administration, Operations"
-            heading="dkCrew, LLC"
-            paragraph="As the IT Administrator and Operations Manager at dkCrew, LLC in Splendora, Texas (March 2020 – April 2024), I was responsible for the company's IT infrastructure and day-to-day operations, administering the systems the business ran on and managing operational workflows over my four years with the company." %}
-
-        {% include sectioncards.html picture="./assets/Experiences/GenesisDimensions.webp"
-            heading="Genesis Dimensions"
-            paragraph="Across four internship placements with Genesis Dimensions (Summer 2017, Summer 2020, Winter 2020, and Summer 2021), I collaborated closely with engineers supporting Research and Development for a large-scale 3D printing project, utilizing industrial robots and novel materials developed by in-house material scientists. I also deployed Taiga, an open-source Agile project management tool, on in-house servers to improve project coordination, and supported the manufacturing and integration of industrial control panels for a Kuka Robot and a Material Flow Control System." %}
-        
-        <a href="https://www.arringtonautomation.com/" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
-            {% include sectioncards.html link_label="Website" picture="./assets/Experiences/ArringtonAutomation.webp"
-                heading="Arrington Automation" 
-                paragraph="As an Engineering Intern I collaborated with a team of engineers to contribute to the design, testing, manufacturing, and integration processes of control panels for industrial control systems." %}
-        </a>
-        
-        <a href="https://www.buildtamu.com/" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-500 outline-[bg-zinc-900] hover:outline rounded-xl" target="_blank">
-            {% include sectioncards.html link_label="Website" picture="./assets/Experiences/BUILD.webp"
-                heading="BUILD" 
-                paragraph="During my dedicated three-year tenure as a volunteer with Build, I held the pivotal role of Design Command Team Leader and was an integral member of the Construction Command Team. Build is a student-led philanthropic organization dedicated to the construction of medical clinics in third-world countries, fostering unity and purpose within the student body." %}
-        </a>
-
+        {% for card in site.data.experiences %}
+        {% include sectioncards.html card=card %}
+        {% endfor %}
     </div>
-    
+
 </section>
