@@ -19,3 +19,23 @@
     over Server-Sent Events, worldwide Postgres leaderboards, and anti-cheat telemetry.
     Deployed and operated in production on DigitalOcean behind Cloudflare. Check it
     out and play a game at countriesofthe.world!
+
+- heading: Composition Helper
+  url: https://github.com/JamesVorder/compositio_nn
+  link_label: GitHub
+  wide: true
+  video: ./assets/EngineeringProjects/CompositionHelper.webm
+  poster: ./assets/EngineeringProjects/CompositionHelper_poster.webp
+  tags: "PyTorch, DINOv3, Computer Vision, ONNX Runtime Web, WebGPU, Progressive Web App"
+  paragraph: >-
+    A collaborative research project on composition-aware aesthetic assessment, built
+    on the Composition Assessment DataBase (CADB). We reproduced the SAMP-Net baseline
+    and compared three DINOv3 architectures predicting the same five-bin quality
+    distribution; the partially unfrozen backbone improved MSE, SRCC, and LCC over the
+    baseline with EMD parity. The project also includes an on-device demo: a
+    progressive web app that runs the fine-tuned model entirely on an iPhone through
+    ONNX Runtime Web on WebGPU, scoring a photo in about 190 ms with no server and no
+    network after the first load. It shows a 1-5 composition score, a percentile
+    against the model's own CADB predictions, and ranked probabilities for all 14
+    composition techniques, drawing each technique's guide over the photo. Check out
+    the code on GitHub!
